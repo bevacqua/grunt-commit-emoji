@@ -21,10 +21,9 @@ module.exports = function(grunt){
         }
 
         var mi = index + 2;
-        var m = args[mi].trim().replace(/\"/g, '\'');
-        var me = '"' + m + ' ' + emoji.random() + '"';
+        var m = args[mi].trim() + ' ' + emoji.random();
 
-        args.splice(mi, 2, me);
+        args.splice(mi, 2, m);
 
         spawn('git', args, { stdio: 'inherit' });
     });
