@@ -6,6 +6,7 @@ var spawn = require('child_process').spawn;
 
 module.exports = function(grunt){
     grunt.registerTask('commit', function(){
+        var done = this.async();
         var argv = _.toArray(process.argv);
         var args = _.rest(argv, 2); // omit 'node', and 'grunt'
         var index;
@@ -26,6 +27,6 @@ module.exports = function(grunt){
         args.splice(mi, 2, m);
 
         var git = spawn('git', args, { stdio: 'inherit' });
-        git.disconnect();
+        git.on('close', done);
     });
 };
