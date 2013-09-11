@@ -1,0 +1,24 @@
+{
+  "name": "grunt-commit-emoji",
+  "description": "Commit through Grunt to add random emoji to your messages",
+  "homepage": "https://github.com/bevacqua/grunt-commit-emoji",
+  "author": {
+    "name": "Nicolas Bevacqua",
+    "email": "ng@bevacqua.io",
+    "url": "http://bevacqua.io"
+  },
+  "version": "0.1.0",
+  "engines": {
+    "node": "0.10.18",
+    "npm": "1.2.x"
+  },
+  "main": "Gruntfile.js",
+  "dependencies": {
+    "emoji-random": "0.1.0",
+    "lodash": "1.3.1"
+  },
+  "devDependencies": {
+    "grunt": "0.4.1"
+  },
+  "keywords": ["gruntplugin", "emoji"]
+}
