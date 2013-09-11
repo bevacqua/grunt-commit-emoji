@@ -26,6 +26,6 @@ module.exports = function(grunt){
         args.splice(mi, 2, m);
 
         var git = spawn('git', args, { stdio: 'inherit' });
-        git.stdin.end();
+        git.disconnect();
     });
 };
